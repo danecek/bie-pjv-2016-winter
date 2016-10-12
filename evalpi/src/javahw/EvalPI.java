@@ -1,6 +1,6 @@
 package javahw;
 
-public class JavaHW {
+public class EvalPI {
 
     static double evalPi(int n) {
         int z = 0;
