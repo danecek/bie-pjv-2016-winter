@@ -14,14 +14,14 @@ public class Rectangle {
     private Point refPoint;
     private double width;
     private double height;
-    
+
     public static final Rectangle EMPTY_RECTANGLE = new Rectangle(0, 0, 0, 0);
-           
 
     public Rectangle(Point refPoint, double width, double height) {
         this.refPoint = refPoint;
-        if (width < 0 || height < 0)
+        if (width < 0 || height < 0) {
             throw new IllegalArgumentException("negative!!!");
+        }
         this.width = width;
         this.height = height;
     }
@@ -48,9 +48,8 @@ public class Rectangle {
     }
 
     Rectangle union(Rectangle r2) {
-        double x = Math.min(refPoint.getX(), r2.getRefPoint().getX());
-        double y = Math.max(refPoint.getY(), r2.getRefPoint().getY());
-        return new Rectangle(new Point(x, y), 0, 0);
+        // do implement this method
+        return null;
     }
 
 }
