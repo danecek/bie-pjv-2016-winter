@@ -47,9 +47,15 @@ public class Rectangle {
         return height;
     }
 
-    Rectangle union(Rectangle r2) {
-        // do implement this method
-        return null;
+    Rectangle union(Rectangle that) {
+        double refX = Math.min(this.refPoint.getX(), that.refPoint.getX());
+        double refY = Math.max(this.refPoint.getY(), that.refPoint.getY());
+
+        double lowRightX = Math.max(this.refPoint.getX() + this.width,
+                that.refPoint.getX() + that.width);
+        double lowRightY = Math.min(this.refPoint.getY() - this.height,
+                that.refPoint.getY() - that.height);
+        return new Rectangle(refX, refY, lowRightX - refX, refY - lowRightY);
     }
 
 }
