@@ -14,15 +14,21 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Const c3 = new Const(3);
         BinOp bop = new BinOp('*',
                               new BinOp('+',
-                                        new Const(1),
+                                        new Const(10),
                                         new Const(2)),
                               c3);
         System.out.println(bop);
         System.out.println(bop.eval());
+        bop.store("expr.data");
+        bop = null;
+        Expr bopCopy = Expr.load("expr.data");
+        System.out.println(bopCopy);
+        System.out.println(bopCopy.eval());
+        
     }
 
 }

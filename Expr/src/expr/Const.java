@@ -11,7 +11,7 @@ package expr;
  */
 public class Const implements Expr {
 
-    private int value;
+    private final int value;
 
     public Const(int value) {
         this.value = value;
@@ -24,6 +24,7 @@ public class Const implements Expr {
         return value;
     }
 
+    @Override
     public int eval() {
         return value;
     }
