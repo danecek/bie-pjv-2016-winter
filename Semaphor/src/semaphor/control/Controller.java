@@ -32,8 +32,8 @@ public class Controller extends Observable {
 
     private boolean runFl;
     ExecutorService es = Executors.newCachedThreadPool();
-    
-        void start() {
+
+    void start() {
         runFl = true;
         es.execute(new Runnable() {
             @Override
@@ -66,7 +66,6 @@ public class Controller extends Observable {
 //            }
 //        }).start();
 //    }
-
     void stop() {
         runFl = false;
     }
