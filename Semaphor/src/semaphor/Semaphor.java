@@ -6,17 +6,16 @@
 package semaphor;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import semaphor.control.Controller;
+import semaphor.control.NextButton;
+import semaphor.control.StartButton;
+import semaphor.control.StopButton;
 import semaphor.view.SemaphorPanel;
 
 /**
@@ -34,19 +33,17 @@ public class Semaphor extends Application {
         BorderPane bp = new BorderPane();
         bp.setLeft(s);
         bp.setRight(s2);
-        Button nextButton;
-        HBox buttons = new HBox(10, nextButton = new Button("Next"), new Button("Green"));
-        bp.setBottom(buttons);
         Controller controller = new Controller() ;
+        HBox buttons = new HBox(10, new NextButton(controller), 
+                new StartButton(controller),
+                new StopButton(controller)
+        );
+                
+
+        bp.setBottom(buttons);
+
         controller.addObserver(s);
         controller.addObserver(s2);
-        nextButton.setOnAction(new EventHandler<ActionEvent>() {  
-
-            @Override
-            public void handle(ActionEvent event) {
-                controller.next();
-            }
-        });
 
         Scene scene = new Scene(bp);
 
