@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Dec 14 19:03:26 CET 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0158-fe80-d5ec-00000e8ae0b8 
+on database directory /home/users/d/danecek/customersPJV with class loader sun.misc.Launcher$AppClassLoader@2503dbd3 
+Loaded from file:/home/users/d/danecek/Java/jdk1.8.0_111/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_111-b14
+user.dir=/home/users/d/danecek/Vyuka/bie-pjv/bie-pjv-2016-winter/JDBCServer
+os.name=Linux
+os.arch=amd64
+os.version=4.4.20-aufs-UCEBNY-b142-fw-ard-02
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
